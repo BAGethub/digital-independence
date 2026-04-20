@@ -16,4 +16,5 @@ Dieses Kapitel führt dich Schritt für Schritt in das Betriebssystem ein, das a
 
 ## Aufgaben für nächste Woche
 - Showcase vorbereiten (zweite Gruppe)
-- [Server Hardening Dokumentation](../wiki/server-hardening/README.md) durchlesen und in der VM einrichten
+- [Ubuntu Server Setup](04-ubuntu-server-setup.md) abschließen. Wenn ihr auf Probleme läuft, dann schreibt einfach in den Matrix-Chat.
+- Optional: [Server Hardening Dokumentation](../wiki/server-hardening/README.md) durchlesen und in der VM einrichten

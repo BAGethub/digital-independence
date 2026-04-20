@@ -4,6 +4,8 @@ Vor dem Start:
 - VM-Software installiert (VirtualBox, VMware, UTM, QUEMU …)
 - Ubuntu Server 24.04 LTS ISO heruntergeladen: https://ubuntu.com/download/server
 
+Achtet darauf, dass wir die richtige ISO für eure CPU habt. Vermutlich habt ihr einen amd64/x86 CPU. Für diesen funktioniert das "standard" Image. Besonders wenn ihr auf einem Mac arbeitet solltet ihr noch einmal schauen, ob ihr nicht doch einen arm64 CPU habt. Dann müsst ihr unter "Andere Architekturen" nach arm64 suchen und diese ISO verwenden.
+
 ---
 
 ## 1. VM einrichten
@@ -77,7 +79,7 @@ Jetzt verbinden wir uns mit der VM über unser Terminal von unserem Hauptsystem.
 
 Wenn unser hauptsystem Linux ist, dann öffnen wir einfach eine Shell und geben das hier ein:
 ```bash
-ssh -p 8080 username@127.0.0.1
+ssh -p 8022 username@127.0.0.1
 ```
 
 Dann werden wir nach dem Passwort gefragt.
