@@ -1,12 +1,12 @@
 # Was ist Linux?
 
-Linux begegnet dir überall – auf Webservern, in Smartphones (Android), in Routern, auf Supercomputern und in der Cloud. Aber was genau ist Linux eigentlich?
+Linux begegnet dir überall: auf Webservern, in Smartphones (Android), in Routern, auf Supercomputern und in der Cloud. Aber was genau ist Linux eigentlich?
 
 ---
 
 ## Der Kernel: Das Herzstück
 
-Linux ist im strengen Sinne nur ein **Kernel** – die unterste Schicht eines Betriebssystems, die direkt mit der Hardware kommuniziert. Der Kernel verwaltet:
+Linux ist im strengen Sinne nur ein **Kernel**, die unterste Schicht eines Betriebssystems, die direkt mit der Hardware kommuniziert. Der Kernel verwaltet:
 
 - den **Arbeitsspeicher** (wer bekommt wie viel RAM?)
 - die **CPU** (welches Programm läuft wann?)

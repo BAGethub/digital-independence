@@ -11,12 +11,15 @@ Linux selbst ist nur der Kernel. Eine **Distribution** (kurz: Distro) packt den 
 ```
 Distribution (z.B. Ubuntu 24.04)
 ├── Linux-Kernel (z.B. 6.8)
-├── Paketmanager (apt)
+├── Paketmanager (z.B. apt)
 ├── Systemdienste (systemd)
 ├── Standardwerkzeuge (bash, coreutils)
 ├── Optionale Desktop-Umgebung (GNOME, KDE, ...)
 └── Vorinstallierte Anwendungen
 ```
+
+Hier gehen wir primär auf Server Distributionen ein und übersehen auch für diesen Use Case bestimmt welche. Für Desktop Distributionen kannst zu z.B. hier mehr Infos bekommen:
+- [distrochooser.de](https://distrochooser.de/de)
 
 ---
 

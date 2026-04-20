@@ -145,7 +145,7 @@ adduser admin
 usermod -aG sudo admin
 ```
 
-Mehr zum Thema VPS findest du unter [server-and-network/06-vps.md](../server-and-network/06-vps.md).
+Mehr zum Thema VPS findest du unter [../../wiki/server-and-network/06-vps.md](../server-and-network/06-vps.md).
 
 ---
 
