@@ -227,7 +227,7 @@ docker compose up -d
 
 # Nextcloud oeffnen
 # https://nextcloud.local:8443
-# admin / <dein-benutzername>@127.0.0.1
+# admin / <dein-passphrase>
 ```
 
 ---
