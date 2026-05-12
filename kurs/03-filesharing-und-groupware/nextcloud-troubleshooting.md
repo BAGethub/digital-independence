@@ -214,7 +214,7 @@ Firefox zeigt Zertifikatswarnung (selbst-signiertes Zertifikat ist normal fuer l
 
 ```bash
 # SSH verbinden
-ssh -p 8022 ba@127.0.0.1
+ssh -p 8022  <dein-benutzername>@127.0.0.1
 
 # Nextcloud starten
 cd ~/nextcloud
@@ -222,12 +222,12 @@ docker compose up -d
 
 # AIO Admin pruefen
 # https://localhost:8888
-# Login: yippee decline prompter rockfish device baggy reoccupy swirl
+# Login: <dein-aio-passphrase>
 # "Start and update containers" klicken
 
 # Nextcloud oeffnen
 # https://nextcloud.local:8443
-# admin / 73f05a5308bc032ad689426a839732f853f5650e71099373
+# admin / <dein-benutzername>@127.0.0.1
 ```
 
 ---
