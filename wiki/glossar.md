@@ -103,6 +103,12 @@ Ein Verschlüsselungsverfahren, das zwei unterschiedliche Schlüssel verwendet: 
 
 Siehe auch: [PGP Cheat Sheet](./tools/pgp-cheat-sheet.md), [TLS-Exkurs](../kurs/03-filesharing-und-groupware/06-tls-exkurs.md)
 
+### Antigravity (Google Antigravity)
+
+Eine proprietäre, agentische Entwicklungsumgebung von Google (Ende 2025 veröffentlicht, Fork von VS Code), in der KI-Agenten ganze Aufgaben eigenständig umsetzen statt nur Code zu vervollständigen. Die Modelle laufen in Googles Cloud, der Quellcode des Nutzers wird also übertragen.
+
+Siehe auch: [Google Antigravity – kritisch eingeordnet](./ki-werkzeuge/01-google-antigravity.md)
+
 ## B
 
 ### Base Image
@@ -710,6 +716,18 @@ Siehe auch: [Nextcloud Apps & Plugins](../kurs/03-filesharing-und-groupware/04-p
 *Abkürzung: K8s*
 
 Eine Orchestrierungsplattform für Container-Verwaltung in großem Maßstab. Kubernetes ist deutlich komplexer als Docker Compose und wird erst bei vielen Containern und Hochverfügbarkeits-Anforderungen relevant.
+
+### KI-Coding-Assistent
+
+Ein Werkzeug, das mithilfe von Sprachmodellen Code vorschlägt, erklärt oder eigenständig schreibt. Entscheidend für die digitale Unabhängigkeit ist, **wo** das Modell läuft: lokal (die Daten bleiben auf dem eigenen Rechner) oder in der Cloud des Anbieters (der Quellcode wird an Dritte übertragen).
+
+Siehe auch: [KI-Werkzeuge](./ki-werkzeuge/README.md)
+
+### Kontextfenster (Context Window)
+
+Die Menge an Text, die ein Sprachmodell gleichzeitig verarbeiten kann. Bei KI-Coding-Assistenten bestimmt es, wie viel Projektkontext – also wie viel eigener Quellcode – an den Anbieter übertragen wird.
+
+Siehe auch: [KI-Werkzeuge](./ki-werkzeuge/README.md)
 
 ## L
 
