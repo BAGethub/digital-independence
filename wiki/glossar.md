@@ -1066,7 +1066,7 @@ Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
 
 Mechanismus zur Einreichung von Code-Änderungen in ein Open-Source-Projekt. Maintainer reviewen den Code und entscheiden, ob er integriert wird.
 
-Siehe auch: [Communities & Warum Open Source nutzen?](../kurs/01-einstieg-open-source/05-communities-und-gruende.md), [Merge Request](#merge-request)
+Siehe auch: [Pull Requests (Git-Spickzettel)](./tools/git-cheat-sheet.md#12-pull-requests-zusammenarbeit-über-github), [Communities & Warum Open Source nutzen?](../kurs/01-einstieg-open-source/05-communities-und-gruende.md), [Merge Request](#merge-request)
 
 ## Q
 

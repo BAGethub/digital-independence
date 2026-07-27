@@ -302,7 +302,140 @@ git pull
 
 ---
 
-## 12. `.gitignore` verwenden (SEHR WICHTIG)
+## 12. Pull Requests (Zusammenarbeit über GitHub)
+
+Ein **Pull Request** (kurz **PR**, deutsch etwa „Änderungsantrag") ist kein Git-Befehl, sondern
+eine Funktion von GitHub, GitLab und ähnlichen Plattformen. Er ist die Bitte:
+
+> „Bitte übernimm die Änderungen von meinem Branch in `main`."
+
+`git merge` (Abschnitt 10) führt Branches **sofort und lokal** zusammen. Ein Pull Request
+schiebt genau diesen Merge auf und macht ihn vorher sichtbar und diskutierbar.
+
+```
+main                    A───B───C          ← bleibt unverändert
+                                 ╲
+mein-feature                      D───E    ← hier wird gearbeitet
+                                      ↑
+                              PR = "D und E nach main übernehmen?"
+```
+
+### Warum das nützlich ist
+
+| Funktion | Nutzen |
+| --- | --- |
+| Diff-Ansicht | Zeilenweise sehen, was sich ändert, **bevor** es übernommen wird |
+| Kommentare | Rückfragen direkt an einzelnen Zeilen, Nachbesserung ohne Neuanfang |
+| Automatische Tests | CI-Prüfungen laufen automatisch (in diesem Repo z.B. der Link-Checker) |
+| Merge-Knopf | Nichts landet in `main`, bevor jemand bewusst zustimmt |
+| Historie | Später nachvollziehbar, *warum* etwas so entschieden wurde |
+
+Der wichtigste Punkt: Ein PR ist ein **Vorschlag mit Vorschau**, keine Änderung.
+`main` bleibt unangetastet, bis jemand zustimmt.
+
+---
+
+### Der typische Ablauf
+
+**1. Branch anlegen und darauf arbeiten**
+
+```bash
+git checkout -b mein-feature
+```
+
+**2. Wie gewohnt committen**
+
+```bash
+git add .
+git commit -m "Beschreibe was geändert wurde"
+```
+
+**3. Branch zum Remote hochladen**
+
+```bash
+git push -u origin mein-feature
+```
+
+Das `-u` merkt sich den Remote-Branch. Danach genügt bei weiteren Commits `git push`.
+
+**4. Pull Request eröffnen**
+
+Nach dem Push zeigt GitHub im Terminal einen Link an, etwa:
+
+```
+remote: Create a pull request for 'mein-feature' on GitHub by visiting:
+remote:      https://github.com/benutzer/repo/pull/new/mein-feature
+```
+
+Diesen Link öffnen, Titel und Beschreibung ausfüllen, absenden. Alternativ findet sich auf
+der Repo-Seite ein Knopf „Compare & pull request".
+
+**5. Rückmeldungen einarbeiten**
+
+Kommt eine Rückfrage, arbeitest du einfach auf demselben Branch weiter:
+
+```bash
+git add .
+git commit -m "Rückmeldung eingearbeitet"
+git push
+```
+
+Der PR aktualisiert sich **automatisch** — kein neuer PR nötig.
+
+**6. Mergen**
+
+Ist alles in Ordnung, klickt jemand auf GitHub „Merge pull request". Erst jetzt ändert sich
+`main`.
+
+**7. Lokal aufräumen**
+
+```bash
+git checkout main
+git pull
+git branch -d mein-feature
+```
+
+---
+
+### Entwurfs-PR (Draft)
+
+Ein **Draft Pull Request** signalisiert „noch in Arbeit, bitte noch nicht mergen". Der
+Merge-Knopf ist gesperrt, Kommentare und Tests laufen aber schon. Nützlich, um früh
+Rückmeldung zu bekommen. Später per Klick auf „Ready for review" umstellen.
+
+---
+
+### Muss man PRs benutzen?
+
+Nein. Wenn du allein an einem Repo arbeitest, reicht der direkte Weg aus Abschnitt 10:
+
+```bash
+git checkout main
+git merge mein-feature
+git push origin main
+```
+
+PRs lohnen sich, sobald **mehrere Personen** am selben Repo arbeiten oder automatische
+Prüfungen laufen sollen. Für diesen Kurs heißt das: Beiträge zum gemeinsamen Repo bitte
+über einen PR, damit alle sehen, was sich ändert.
+
+---
+
+### Fremde Repositories: Fork
+
+Bei einem fremden Repo hast du keine Schreibrechte und kannst keinen Branch pushen. Der Weg
+dorthin führt über einen **Fork** – eine eigene Kopie des Repos unter deinem Account:
+
+1. Auf GitHub auf „Fork" klicken
+2. Deine Kopie klonen: `git clone https://github.com/DEIN-NAME/repo.git`
+3. Branch anlegen, committen, in **deinen** Fork pushen
+4. PR von deinem Fork zum Original-Repo eröffnen
+
+So funktionieren praktisch alle Beiträge zu Open-Source-Projekten.
+
+---
+
+## 13. `.gitignore` verwenden (SEHR WICHTIG)
 
 Niemals committen:
 
@@ -338,7 +471,7 @@ Jetzt wird diese Datei dauerhaft ignoriert.
 
 ---
 
-## 13. Praxisbeispiel: Serverkonfiguration zurückrollen
+## 14. Praxisbeispiel: Serverkonfiguration zurückrollen
 
 Stell dir vor, du bearbeitest `docker-compose.yml`.
 
@@ -360,7 +493,7 @@ Genau deshalb ist Git so wertvoll für die Serververwaltung.
 
 ---
 
-## 14. Nützliche tägliche Befehle
+## 15. Nützliche tägliche Befehle
 
 ```bash
 git status
@@ -373,7 +506,7 @@ git switch main
 
 ---
 
-## 15. Goldene Regeln für Self-Hosting
+## 16. Goldene Regeln für Self-Hosting
 
 * Committen, BEVOR du riskante Änderungen machst
 * Niemals Geheimnisse committen
@@ -398,11 +531,11 @@ Für Serveradministratoren gilt: Git = **kontrolliertes Experimentieren ohne Ang
 
 ---
 
-## 16. Häufige Fehler
+## 17. Häufige Fehler
 
 ### Versehentlich Geheimnisse committen
 
-Niemals `.env`-Dateien oder Passwörter committen. Falls es passiert ist: `git rm --cached` und `.gitignore` verwenden (siehe Abschnitt 12).
+Niemals `.env`-Dateien oder Passwörter committen. Falls es passiert ist: `git rm --cached` und `.gitignore` verwenden (siehe Abschnitt 13).
 
 ### Konflikte mit dem Remote
 
