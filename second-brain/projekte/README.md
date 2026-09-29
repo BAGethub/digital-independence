@@ -4,6 +4,6 @@
 |---|---|---|
 | [Praktikum](praktikum/README.md) | | offen |
 | [Ausbildungsvorbereitung](ausbildungsvorbereitung/README.md) | | offen |
-| [KI-Hosting auf lokalem PC](ki-hosting-lokal/README.md) | | offen |
+| [KI-Hosting auf lokalem PC](ki-hosting-lokal/README.md) | | Entwurf (Ollama, läuft auf eigenem PC) |
 
 Neue Projekte entstehen mit der Vorlage [`_vorlage.md`](_vorlage.md).
