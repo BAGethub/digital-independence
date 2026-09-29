@@ -12,9 +12,9 @@ Ein KI-Sprachmodell (LLM) selbst betreiben, statt einen Cloud-Dienst zu nutzen. 
 
 ## Technik und Werkzeuge
 - **Ollama** als lokaler Modellserver
-- **Betriebssystem:** TODO
-- **Hardware (CPU, RAM, GPU):** TODO
-- **Modelle:** TODO (zum Beispiel Llama 3, Mistral, Phi-3)
+- **Betriebssystem:** Windows 11
+- **Hardware:** 16 GB RAM (CPU und GPU: TODO)
+- **Modell:** Llama 3
 
 ## Ergebnis
 - TODO: Was lief gut? Wie schnell waren die Antworten? Wofür habe ich es genutzt?
